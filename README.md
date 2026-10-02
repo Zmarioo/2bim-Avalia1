@@ -22,6 +22,6 @@ Framework preset: `None`. Build command: vazio. Build output directory: `public`
 
 ## Identificação (preencha após o fork)
 
-Nome: 
-RA: 
+Nome: Jose Mario Gonzaga Junior
+RA: 2026107610
 URL: https://

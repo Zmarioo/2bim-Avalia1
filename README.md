@@ -24,4 +24,4 @@ Framework preset: `None`. Build command: vazio. Build output directory: `public`
 
 Nome: Jose Mario Gonzaga Junior
 RA: 2026107610
-URL: https://
+URL: https://2bim-avalia1.jsemario17.workers.dev

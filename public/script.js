@@ -6,6 +6,12 @@ function handleCredentialResponse(response) {
     userToken = response.credential;
     document.getElementById('mensagem-erro').innerText = 'Login efetuado com sucesso! Agora podes gerar o desenho.';
     document.getElementById('mensagem-erro').style.color = 'green';
+    
+    // Esconder o botão do Google para não voltar a pedir login
+    const googleButton = document.querySelector('.g_id_signin');
+    if (googleButton) {
+        googleButton.style.display = 'none';
+    }
 }
 
 document.getElementById('form-desenho').addEventListener('submit', async (e) => {

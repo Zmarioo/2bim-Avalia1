@@ -1,6 +1,6 @@
 import { gerarDesenho } from '../../lib/desenho.js';
 
-export async function onRequest(context) {
+export async function onRequestPost(context) {
   const { request, env } = context;
 
   // 1. Verificar Método HTTP (Erro 405)
@@ -63,7 +63,7 @@ export async function onRequest(context) {
     const expectedClientId = env.GOOGLE_CLIENT_ID;
 
     // Verificar se o "aud" corresponde ao teu Client ID e se o e-mail foi verificado
-    if (tokenPayload.aud !== expectedClientId || tokenPayload.email_verified !== 'true') {
+    if (tokenPayload.aud !== expectedClientId || (tokenPayload.email_verified !== true && tokenPayload.email_verified !== 'true')) {
       return new Response(JSON.stringify({ error: 'Não autorizado ou e-mail não verificado' }), {
         status: 401,
         headers: { 'Content-Type': 'application/json' }
